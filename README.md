@@ -1,6 +1,5 @@
 # global-sales-transaction-analytics
 Advanced SQL analysis and database optimization scripts for the Kaggle Sample Sales ledger.
-```markdown
 # Global Sales Transaction Ledger Analytics
 
 ## 📌 Project Overview
@@ -16,7 +15,6 @@ This repository showcases an analytics pipeline built for a denormalized flat-fi
 ### 1. Text-to-Date Dynamic Casting
 * **Problem:** The `ORDERDATE` field was imported as an amorphous text string (`VARCHAR`), preventing chronological sequencing and time-series extraction.
 * **Resolution:** Implemented dynamic string parsing parameters:
-```sql
 STR_TO_DATE(ORDERDATE, '%m/%d/%Y %H:%i')
 This cleanly isolated continuous variables like YEAR() and MONTH() to correctly plot Year-over-Year revenue momentum and retail seasonality patterns without converting the underlying table architecture.
 
